@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+section.hero {
+  height: 60vh;
+  width: 170%;
+  margin-top: 50%;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("./Assets/bg.gif");
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  transition: 0.5s ease;
+  background: linear-gradient(125.33deg, #f89231 0%, #ed3983 49.88%);
+  color: #fff;
+  width: 125px;
+  height: 51px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: moveButton 1s alternate-reverse infinite;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.247);
+}
+
+img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+.nft-card{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+  padding-bottom: 20px;
+}
+
+@keyframes moveButton {
+  from {
+    transform: translateY(-15px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* large screen */
+@media only screen and (min-width: 920px) {
+  .container {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 56%;
+    height: 100vh;
+  }
+
+  section.hero {
+    height: 70vh;
+    width: 40%;
+    margin-bottom: 8em;
+    margin-top: 20%;
+  }
+
+  .sub-text {
+    line-height: 2em;
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    animation: moveButton 1s alternate-reverse infinite;
+  }
+
+  .nft-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 20px;
+  }
+}
