@@ -88,13 +88,13 @@ const App = () => {
       </section>
 
       <section className="nft-cards">
-        {nfts.length <= 0 ? (
+        {nfts?.length <= 0 ? (
           <h5>You dont have any NFTs 👋</h5>
         ) : (
           <div>
             <h5>Your NFTs 👋</h5>
             <div className="nft-card">
-              {nfts.map((data, index) => (
+              {nfts?.map((data, index) => (
                 <Card key={index} data={data} />
               ))}
             </div>
